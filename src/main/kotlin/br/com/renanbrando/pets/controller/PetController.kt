@@ -23,4 +23,14 @@ class PetController{
     fun save(@RequestBody pet: Pet){
         petService.savePet(pet)
     }
+
+    @GetMapping(value = "/name/{name}")
+    fun searchBy(@PathVariable(value = "name") name: String) : List<Pet>{
+        return petService.findBy(name = name)
+    }
+
+    @DeleteMapping("{id}")
+    fun delete(@PathVariable("id") id: String){
+
+    }
 }

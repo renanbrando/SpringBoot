@@ -5,4 +5,7 @@ import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface PetRepository : MongoRepository<Pet, String>
+interface PetRepository : MongoRepository<Pet, String> {
+
+    fun findByNameIgnoreCaseContaining(name: String) : List<Pet>
+}

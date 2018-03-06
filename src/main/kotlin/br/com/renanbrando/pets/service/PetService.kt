@@ -18,4 +18,12 @@ class PetService {
     fun savePet(pet: Pet){
         petRepository.save(pet)
     }
+
+    fun findBy(name: String): List<Pet>{
+        return petRepository.findByNameIgnoreCaseContaining(name)
+    }
+
+    fun delete(id: String){
+        petRepository.deleteById(id)
+    }
 }
