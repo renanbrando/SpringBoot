@@ -1,4 +1,4 @@
-package service
+package br.com.renanbrando.pets.service
 
 import br.com.renanbrando.pets.model.Pet
 import br.com.renanbrando.pets.repository.PetRepository

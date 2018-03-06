@@ -3,12 +3,12 @@ package br.com.renanbrando.pets.controller
 import br.com.renanbrando.pets.model.Pet
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import service.PetService
+import br.com.renanbrando.pets.service.PetService
 
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/pet")
-class PetConroller{
+class PetController{
 
     @Autowired
     lateinit var petService : PetService
