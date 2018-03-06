@@ -20,7 +20,7 @@ class PetController{
     }
 
     @PostMapping
-    fun save(pet: Pet){
+    fun save(@RequestBody pet: Pet){
         petService.savePet(pet)
     }
 }
